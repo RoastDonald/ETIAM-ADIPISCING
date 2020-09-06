@@ -1,0 +1,46 @@
+
+
+
+
+//Buttons
+
+@mixin PaddingProportion($padding:null,$multi:null){
+	$SizeInFormulaX:#{$padding * $multi+$padding}px;
+	$SizeInFormulaY:#{$padding * $multi - $padding}px;
+
+	padding-top: $SizeInFormulaY;
+	padding-bottom: $SizeInFormulaY;
+	padding-left:  $SizeInFormulaX;
+	padding-right:  $SizeInFormulaX ;
+}
+
+@mixin PaddingX($padding:null,$multi:null){
+	
+	$paddingXFormula:#{$padding * $multi}px;
+
+	padding-left:$paddingXFormula;
+	padding-right:$paddingXFormula;
+}
+
+
+@mixin PaddingY($padding:null,$multi:null){
+	
+	$paddingYFormula:#{$padding * $multi}px;
+
+	padding-top:$paddingYFormula;
+	padding-bottom:$paddingYFormula;
+}
+
+
+@mixin OrderedArticle($order:true){
+
+	@if $order {
+		img { order:1; }
+		.content { order:2;}
+	}
+    @else {
+		img { order:2; }
+		.content { order:1;}
+	}
+	
+}

@@ -1,0 +1,60 @@
+
+@import 'libs/vars';
+@import 'libs/mixins';
+
+
+.small {
+	@include PaddingX(10,5.5);
+	@include PaddingY(10,1);
+}
+
+.medium {
+	@include PaddingX(10,6);
+	@include PaddingY(10,2);
+}
+
+.large{
+	@include PaddingX(10,8);
+	@include PaddingY(10,8);
+}
+
+
+
+.btn {
+	border-radius: 40px;
+	text-align:center;
+	text-transform:uppercase;
+	border:1.5px solid black;
+	font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+.default {
+		
+		color:$inversedBtnColor;
+		
+		border-color: $innerBtnColor;
+		background-color:$innerBtnColor;
+}
+
+.inverse {
+		
+		color:$innerBtnColor;
+		
+		background-color:$inversedBtnColor;
+		border-color:$innerBtnColor;
+}
+
+
+.btnStyle1 {
+		border-color:$style1BtnColor;
+		color:$style1BtnColor;
+}

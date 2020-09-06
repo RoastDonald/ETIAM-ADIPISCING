@@ -1,0 +1,328 @@
+
+@import 'libs/vars';
+@import 'libs/mixins';
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper { 
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	flex-flow:column wrap;
+ }
+
+
+
+.left {
+	@include OrderedArticle(true);
+}
+
+.right{
+	@include OrderedArticle(false);
+}
+
+
+
+
+
+ .info {
+ 	background-color: rgb(238, 238, 238);
+	
+ }
+
+
+
+
+
+
+
+
+
+.feature:first-of-type {
+	margin-top: 8%;
+}
+
+.feature:last-of-type{
+	margin-bottom: 8%;
+}
+
+.feature {
+	
+	display: flex;
+	flex-flow:row wrap;
+	margin-top:4%;
+	margin-left:12%;
+	margin-right:12%;
+	background-color: $featureColor;
+	padding: 0;
+
+	img {
+		width: 48%;
+	}
+
+	@media (min-width:367px) and (max-width:1024px){
+		img {
+			width: auto;
+		}
+		
+		.btn {
+			margin-bottom:15px;
+			margin-top: 15px;
+			
+
+
+
+		}
+
+		display: inline-block;		
+
+	}
+   	
+	
+
+
+	.content {
+		display: flex;
+		flex-flow:column wrap;
+		flex:1 1 50%;
+		padding:0vh 3vw;
+		justify-content: flex-start;
+		
+		
+		h2{
+			color:$contentTittleColor;
+			font-size:2em;
+			line-height:1.3em;
+			padding-bottom: 3vh;
+			padding-top:3vh;
+		}
+	
+		p{
+			line-height:2;
+			color:$contentDescColor;
+			padding-bottom:1vh;
+			font-size:1.5rem;
+		}
+
+		ul {
+			display: flex;
+			height: 30%;
+			align-items: center;
+
+
+		}
+		
+		
+
+		li{
+		    display:inline-block;
+		    margin-left: -10px;
+
+		}
+
+	}
+
+}
+
+
+
+
+ .wrapperFullWidth {	
+ 	background-color: #fff;
+	width: 98vw;
+	height: 100vh;
+
+}
+
+
+.contentGallary {
+	display: flex;
+	flex-flow:column wrap;
+	.text {
+
+		margin:0 auto;
+		width: 40%;
+		text-align: center;
+
+
+
+		h2{
+			display: flex;
+			justify-content: center;
+			margin-top: 15vh;
+ 			color:$galleryTittleColor;
+ 		}
+	
+ 		p{
+ 			margin-top: 5vh;
+ 			color:$galleryDescColor;
+ 			line-height: 1.5;
+ 			font-size:1.8rem;
+ 			padding-bottom: 5vh;
+ 		}
+	}
+
+
+
+ 	.photos {
+ 		display: flex;
+ 		flex-flow:row wrap;
+ 		justify-content: center;
+ 		margin-left: $marginPhotoContainer;
+ 		margin-right: $marginPhotoContainer;
+		margin-bottom: 5%;
+ 		img {
+ 			width: 25%;
+ 		}
+
+ 		.btn {
+ 			@include PaddingX(10,4);
+ 			@include PaddingY(10,1);
+ 			margin-top: 20%;
+ 		}
+ 	}
+
+}
+
+
+
+.backStyle {
+	display: flex;
+	justify-content: center;
+	 .text-back {
+	 	display: flex;
+	 	flex-flow:column wrap;
+		text-align: center;
+		color:white;
+		margin-top: 10vh;
+		width: 55%;	
+		line-height: 1.5;
+
+	 	h2 {
+	 	
+			font-size:2.5rem;
+			margin-bottom: 5vh;
+		}
+
+		p{
+	
+			font-size:2rem;
+		}
+
+		ul{
+			display: flex;
+			justify-content: center;
+		}
+
+		.btn {
+			margin-top: 8vh;
+			
+		}
+
+	 }
+
+	background-image:url(../../images/pic11.jpg);
+	background-size: cover;
+	margin-top: 10vh;
+	width: 98vw;
+	height: 55vh;
+
+}
+
+
+
+.lastSection{
+	display: flex;
+	justify-content: center;
+	width: 98vw;
+	height: 80vh;
+	background-color: #1E2832;
+	color:white;
+	text-align:center;
+			.lastContent{
+				display:flex;
+				flex-flow:column wrap;
+				margin-top: 10vh;
+				
+				h2 {
+					margin-top:5vh;
+					font-size:3rem;
+
+				}	
+
+				p{
+					font-size:1.5rem;
+					margin-top: 3vh;
+				}
+
+				.inputs{
+					margin-left: 16%;
+					margin-right: 16%;	
+					
+					display: flex;
+					flex-flow:row wrap;
+					margin-top:5vh;
+					justify-content: space-between;
+					
+					input:first-of-type{
+						margin-right: 30px;
+					}
+						
+
+					  	
+					input[type="text"], input[type="email"]
+					 {
+					 	font-size:2em;
+					 	color:$innerBtnColor;
+					 	display: flex;
+					 	flex:1 0 299px;
+					 	margin-bottom: 20px;
+					 	height: 40px;
+					 	width:150px;
+						border: 1px solid #29333C;
+						
+						background-color: #29333C;
+
+						&:focus{
+							border-color:$innerBtnColor; 
+						}
+
+					  }
+
+					  textarea{
+						width: 800px;
+						height: 200px;
+						font-size:2em;
+						color:$innerBtnColor;
+						background-color: #29333C;	
+					  }
+
+				}	
+
+					ul {
+						margin-left:15%;
+						display: flex;
+						flex-flow:row wrap;
+						justify-content: space-around;
+					 	margin-top: 5vh;	
+						height:3vh;
+						width:72%;
+					 }			
+			}
+
+}
+
+
+
+
+
+ 	

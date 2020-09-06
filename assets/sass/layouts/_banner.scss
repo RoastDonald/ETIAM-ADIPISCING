@@ -1,0 +1,72 @@
+
+@import 'libs/vars';
+@import 'libs/mixins';
+
+
+
+
+
+/*----------Important--------*/
+%wrapContainerBanner {
+	display: flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-items: center;
+
+}
+
+.firstSection {
+	background-size: cover;
+    background-image:url(images/overlay.png),
+    				 url(../../images/banner.jpg);
+    align-items: center;
+}
+/*----------Important--------*/
+
+
+
+
+
+
+.banner{
+
+	@extend %wrapContainerBanner;
+	padding: 11em 0 9em 0;
+	.fa-gem{
+		
+		font-size:5em;
+		color:$bannerGemColor;
+	}
+
+	h2 {
+		color:$bannerTitleColor;
+		margin-top:20px;
+
+	}
+
+	p{
+		color:$bannerDescColor;
+		text-align: center;
+		margin-top:25px;
+	}
+
+	ul {
+		padding-top: 30px;
+		padding-bottom:50px;
+	}
+	
+	
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+

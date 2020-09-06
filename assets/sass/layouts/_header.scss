@@ -1,0 +1,38 @@
+/*----------Important--------*/
+%wrapContainerHeader {
+	display: flex;
+	flex-flow:row nowrap;
+	justify-content: space-between;
+}
+
+%position {
+	margin:35px 45px;
+}
+/*----------Important--------*/
+
+
+
+.header {
+	@extend %wrapContainerHeader;
+
+
+	&-logo{
+		@extend %position;
+	 	a{
+	 		color:$headerColor;
+	 	}
+	}
+
+	&-nav{
+		@extend %position;
+		color:$headerColor;
+
+		i{
+			font-size:17px;
+			margin-right:8px;
+		}
+		
+	}
+
+	
+}
